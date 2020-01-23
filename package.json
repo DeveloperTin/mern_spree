@@ -1,0 +1,26 @@
+{
+  "name": "mern_spree",
+  "version": "1.0.0",
+  "description": "MERN o2o system for spree",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeveloperTin/mern_spree.git"
+  },
+  "author": "TKS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeveloperTin/mern_spree/issues"
+  },
+  "homepage": "https://github.com/DeveloperTin/mern_spree#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.9"
+  }
+}
