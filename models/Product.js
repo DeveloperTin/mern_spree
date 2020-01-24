@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const ProductSchema = new Schema({
-  category: {
-    type: String,
-    required: true
-  },
-
   eng_name: {
     type: String,
     required: true
@@ -60,6 +55,11 @@ const ProductSchema = new Schema({
 
   weight: {
     type: String
+  },
+
+  product_status: {
+    type: Boolean,
+    default: false
   },
 
   date: {

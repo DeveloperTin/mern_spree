@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 const products = require("./routes/api/products");
+const categories = require("./routes/api/categories");
+const brands = require("./routes/api/brands");
+
+const coupons = require("./routes/api/coupons");
 
 const app = express();
 
@@ -20,6 +24,10 @@ mongoose
   .catch(err => console.log(err));
 
 app.use("/api/products", products);
+app.use("/api/categories", categories);
+app.use("/api/brands", brands);
+
+app.use("/api/coupons", coupons);
 
 const port = process.env.PORT || 5000;
 

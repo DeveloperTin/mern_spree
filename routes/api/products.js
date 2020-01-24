@@ -17,7 +17,6 @@ router.get("/", (req, res) => {
 // @access  Public
 router.post("/", (req, res) => {
   const newProduct = new Product({
-    category: req.body.category,
     eng_name: req.body.eng_name,
     brand: req.body.brand,
     sku: req.body.sku,
@@ -29,14 +28,15 @@ router.post("/", (req, res) => {
     msrp_price: req.body.msrp_price,
     original_price: req.body.original_price,
     qty: req.body.qty,
-    weight: req.body.weight
+    weight: req.body.weight,
+    product_status: req.body.product_status
   });
 
   newProduct.save().then(product => res.json(product));
 });
 
 // @route   DELETE api/products/:id
-// @desc    Delete a item
+// @desc    Delete a product
 // @access  Public
 router.delete("/:id", (req, res) => {
   Product.findById(req.params.id)
